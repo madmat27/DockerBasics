@@ -4,6 +4,15 @@ cd myapp/
 # Build docker from Dockerfile
 docker build --tag my-docker --name my-docker .
 
+# Run Docker with terminal
+docker run --name mydocker --tty --interactive <image name>
+
+# Copy files to Docker
+docker cp myfile.txt <container-id or container-name>:/myfile.txt
+
+# Docker pull iamges
+docker pull <docker-image>
+
 # Check docker images
 docker images
 
