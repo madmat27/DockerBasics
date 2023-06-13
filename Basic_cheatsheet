@@ -1,0 +1,23 @@
+# Enter directory that contains Dockerfile:
+cd myapp/
+
+# Build docker from Dockerfile
+docker build --tag my-docker --name my-docker .
+
+# Check docker images
+docker images
+
+# Check active containers
+docker ps
+docker ps -a // check all containers; both active and inactive
+
+# Run container detached exposing port 5000
+docker run -d -p 5000:5000 my-docker
+
+# Clear containers // images
+docker container prune
+docker image prune
+
+# Delete Containers, Images, Volumes
+docker system prune
+docker system prune -a // all active and inactive
